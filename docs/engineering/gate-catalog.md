@@ -93,4 +93,4 @@
 | `GATE-44` | 单位量级异常 | 同一语义在跨期比较中量级跳变 |
 | `GATE-55` | 组合相关性 | 新增标的与既有持仓的相关性约束 |
 
-新增闸门请遵循 [CONTRIBUTING.md](../../CONTRIBUTING.md) 的五步流程。
+新增闸门请遵循 [CONTRIBUTING.md](https://github.com/sun111msc/zisu-investment-analysis/blob/main/CONTRIBUTING.md) 的五步流程。

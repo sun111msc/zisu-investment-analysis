@@ -169,7 +169,7 @@ def gate_44_unit_scale_anomaly(ctx):
 ```
 
 然后在 `ALL_RULES` 登记、更新 `docs/engineering/gate-catalog.md`、加正反两个单测。
-具体步骤见 [CONTRIBUTING.md](../../CONTRIBUTING.md)。
+具体步骤见 [CONTRIBUTING.md](https://github.com/sun111msc/zisu-investment-analysis/blob/main/CONTRIBUTING.md)。
 
 ## 第七步：跑评测
 
@@ -179,4 +179,4 @@ make eval-out                # 输出到 evals/reports/
 PYTHONPATH=src python evals/run_eval.py --strict   # 劣化即失败
 ```
 
-指标定义见 [evals/README.md](../../evals/README.md)。
+指标定义见 [evals/README.md](https://github.com/sun111msc/zisu-investment-analysis/tree/main/evals)。

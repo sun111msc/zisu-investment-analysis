@@ -61,7 +61,14 @@ nav:
       - 闸门目录: engineering/gate-catalog.md
       - 数值契约: engineering/contract-spec.md
       - 工程原则: engineering/principles.md
-      - 架构决策记录: engineering/adr/README.md
+      - 架构决策记录:
+          - 索引与说明: engineering/adr/README.md
+          - 0001 用 Phase 取代 Layer: engineering/adr/0001-phase-over-layer.md
+          - 0002 类型化数值契约: engineering/adr/0002-typed-numeric-contract.md
+          - 0003 编译期登记门禁: engineering/adr/0003-fail-closed-registry.md
+          - 0004 三态输出: engineering/adr/0004-three-state-output.md
+          - 0005 反向 DCF 作为护栏: engineering/adr/0005-reverse-dcf-guardrail.md
+          - 0006 否决全量契约体系: engineering/adr/0006-rejected-full-contract-suite.md
   - 评测: https://github.com/sun111msc/zisu-investment-analysis/tree/main/evals
   - 贡献指南: https://github.com/sun111msc/zisu-investment-analysis/blob/main/CONTRIBUTING.md
   - 免责声明: https://github.com/sun111msc/zisu-investment-analysis/blob/main/DISCLAIMER.md
