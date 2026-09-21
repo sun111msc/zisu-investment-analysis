@@ -1,0 +1,174 @@
+{
+  "symbol": "DEMO.SZ",
+  "title": "通过样例：数据完整、口径自洽、闸门全通过",
+  "description": "全部数据为虚构占位，金额单位为亿元，仅用于演示代码路径与闸门行为。",
+  "sources": {
+    "market.quote.primary": ["price", "market_cap", "pe_ttm", "shares_outstanding"],
+    "financials.statements.primary": [
+      "revenue", "net_income", "gross_margin", "operating_cash_flow", "capex",
+      "total_assets", "total_liabilities", "total_equity",
+      "current_assets", "current_liabilities", "long_term_debt",
+      "retained_earnings", "ebit", "depreciation", "sga", "ppe",
+      "accounts_receivable", "inventory", "roe", "eps",
+      "revenue_prior", "net_income_prior", "total_assets_prior"
+    ],
+    "industry.statistics": ["capacity", "market_share", "shipment"]
+  },
+  "records": {
+    "market.quote.primary": {
+      "price|DEMO.SZ": [28.4, "TODAY", "CNY"],
+      "market_cap|DEMO.SZ": [200.0, "TODAY", "CNY"],
+      "pe_ttm|DEMO.SZ": [16.67, "TODAY", null],
+      "shares_outstanding|DEMO.SZ": [7.0422535, "TODAY", null]
+    },
+    "financials.statements.primary": {
+      "revenue|DEMO.SZ": [100.0, "TODAY", "CNY"],
+      "net_income|DEMO.SZ": [12.0, "TODAY", "CNY"],
+      "gross_margin|DEMO.SZ": [37.0, "TODAY", null],
+      "operating_cash_flow|DEMO.SZ": [13.5, "TODAY", "CNY"],
+      "capex|DEMO.SZ": [7.0, "TODAY", "CNY"],
+      "total_assets|DEMO.SZ": [100.0, "TODAY", "CNY"],
+      "total_liabilities|DEMO.SZ": [45.0, "TODAY", "CNY"],
+      "total_equity|DEMO.SZ": [55.0, "TODAY", "CNY"],
+      "current_assets|DEMO.SZ": [50.0, "TODAY", "CNY"],
+      "current_liabilities|DEMO.SZ": [25.0, "TODAY", "CNY"],
+      "long_term_debt|DEMO.SZ": [18.0, "TODAY", "CNY"],
+      "retained_earnings|DEMO.SZ": [20.0, "TODAY", "CNY"],
+      "ebit|DEMO.SZ": [14.4, "TODAY", "CNY"],
+      "depreciation|DEMO.SZ": [5.0, "TODAY", "CNY"],
+      "sga|DEMO.SZ": [12.0, "TODAY", "CNY"],
+      "ppe|DEMO.SZ": [35.0, "TODAY", "CNY"],
+      "accounts_receivable|DEMO.SZ": [15.0, "TODAY", "CNY"],
+      "inventory|DEMO.SZ": [12.0, "TODAY", "CNY"],
+      "roe|DEMO.SZ": [21.8, "TODAY", null],
+      "eps|DEMO.SZ": [1.704, "TODAY", "CNY"],
+      "revenue_prior|DEMO.SZ": [88.0, "TODAY", "CNY"],
+      "net_income_prior|DEMO.SZ": [9.2, "TODAY", "CNY"],
+      "total_assets_prior|DEMO.SZ": [92.0, "TODAY", "CNY"]
+    },
+    "industry.statistics": {
+      "capacity|DEMO.SZ": [12, "TODAY", null],
+      "market_share|DEMO.SZ": [18.0, "TODAY", null],
+      "shipment|DEMO.SZ": [4500, "TODAY", null]
+    }
+  },
+  "meta": {
+    "profile": {
+      "one_liner": "把化工原料加工成薄膜、再卖给面板厂贴在屏幕上的材料公司",
+      "business_lines": [
+        { "name": "光学薄膜", "revenue": 60.0, "revenue_share": 0.6, "gross_margin": 45.0 },
+        { "name": "功能涂层材料", "revenue": 40.0, "revenue_share": 0.4, "gross_margin": 25.0 }
+      ],
+      "peers": [
+        { "name": "同业一号" }, { "name": "同业二号" }, { "name": "同业三号" },
+        { "name": "同业四号" }, { "name": "同业五号" }, { "name": "同业六号" }
+      ],
+      "exec_summary": {
+        "thesis": "硬化层材料环节供应高度集中，公司在该环节份额领先，估值尚未反映其定价能力",
+        "target_range": [32.0, 41.0],
+        "reasons": [
+          "硬化层材料全球仅一家可供应，认证周期超过两年",
+          "产能利用率处于高位，扩产项目在建",
+          "同业估值中位数低于同业均值，公司估值处于中位区间"
+        ],
+        "risks": [
+          "下游资本开支增速连续两季下滑",
+          "客户集中度偏高，前两大客户占收入比重较大",
+          "新增产能投放时间不确定"
+        ]
+      }
+    },
+    "industry": {
+      "tam": 800.0,
+      "sam": 180.0,
+      "som": 45.0,
+      "cagr": 0.14,
+      "penetration": 0.22,
+      "lifecycle": "growth"
+    },
+    "chain": {
+      "layers": [
+        { "level": 1, "name": "原料聚合", "process": "丙烯腈聚合与纯化", "unit_value": 3.2, "unit": "元/kg", "global_suppliers": 12, "certification_years": 0.5 },
+        { "level": 2, "name": "基膜流延", "process": "双向拉伸流延成膜", "unit_value": 8.5, "unit": "元/m2", "global_suppliers": 6, "certification_years": 1.0 },
+        { "level": 3, "name": "光学涂布", "process": "精密涂布光学功能层", "unit_value": 22.0, "unit": "元/m2", "global_suppliers": 3, "certification_years": 1.5 },
+        { "level": 4, "name": "硬化层材料", "process": "紫外固化硬化涂层合成", "unit_value": 41.0, "unit": "元/m2", "global_suppliers": 1, "certification_years": 2.5 },
+        { "level": 5, "name": "离型膜", "process": "有机硅离型剂配方与涂布", "unit_value": 15.0, "unit": "元/m2", "global_suppliers": 5, "certification_years": 1.0 },
+        { "level": 6, "name": "模切加工", "process": "卷对卷精密模切", "unit_value": 6.0, "unit": "元/m2", "global_suppliers": 20, "certification_years": 0.3 },
+        { "level": 7, "name": "面板贴合", "process": "偏光片与面板贴合", "unit_value": 55.0, "unit": "元/m2", "global_suppliers": 4, "certification_years": 2.0 }
+      ],
+      "excluded_competitors": [
+        { "name": "海外甲社", "reason": "该工序仅覆盖实验线，无量产产能与客户认证记录" },
+        { "name": "海外乙社", "reason": "产品停留于样品阶段，未进入面板厂合格供应商名录" },
+        { "name": "国内丙公司", "reason": "宣称具备配方能力，但公开披露中无该产品线收入" },
+        { "name": "国内丁公司", "reason": "通过贸易商转售同类材料，不具备自主合成能力" },
+        { "name": "海外戊社", "reason": "已公告退出该细分品类，产线转产其他产品" }
+      ],
+      "capacity_bridge": {
+        "equipment_units": 24,
+        "asp": 41.0,
+        "delivery_ratio": 0.85,
+        "acceptance_ratio": 0.95,
+        "unit": "百万元"
+      }
+    },
+    "assumptions": {
+      "revenue_growth": 0.15,
+      "growth_decay": 0.85,
+      "net_margin_target": 0.15,
+      "asset_turnover": 1.0,
+      "leverage": 0.45,
+      "cash_conversion": 1.05,
+      "capex_ratio": 0.07,
+      "da_ratio": 0.05,
+      "tax_rate": 0.15
+    },
+    "market": {
+      "nonconsensus": [
+        "市场把公司当作普通基膜厂商定价，忽略了硬化层材料仅一家可供应这一事实",
+        "面板厂国产化率考核指标将自下一年度起纳入该材料品类，需求节奏可能快于市场预期"
+      ],
+      "bear_arguments": [
+        { "claim": "下游资本开支增速已连续两季下滑，需求端可能不及预期", "evidence_grade": "L1" },
+        { "claim": "同业公司公告新建同类产线，将在两年后形成新增供给", "evidence_grade": "L1" },
+        { "claim": "客户集中度偏高，前两大客户占收入比重较大，议价能力受限", "evidence_grade": "L3" }
+      ],
+      "bull_arguments": [
+        { "claim": "硬化层材料已通过两家面板厂认证并批量供货", "evidence_grade": "L1" },
+        { "claim": "现有产能利用率处于高位，扩产项目已开工建设", "evidence_grade": "L2" }
+      ],
+      "counterfactuals": [
+        {
+          "if": "下游资本开支连续三季度同比下滑",
+          "then": "当期收入增速降至个位数",
+          "observable": "季度资本开支公告与在建工程科目变动"
+        }
+      ],
+      "cycles": { "stage": "growth" }
+    },
+    "valuation": {
+      "wacc": 0.1,
+      "terminal_g": 0.03,
+      "net_debt": 0.0,
+      "growth_reference": 0.1,
+      "peers": [
+        { "name": "同业一号", "pe": 22.0 },
+        { "name": "同业二号", "pe": 18.5 },
+        { "name": "同业三号", "pe": 25.0 },
+        { "name": "同业四号", "pe": 20.0 },
+        { "name": "同业五号", "pe": 19.5 }
+      ]
+    },
+    "execution": {
+      "governance": "A",
+      "environment": "B",
+      "stop_loss_pct": 0.12,
+      "horizon": "medium",
+      "conflicts": []
+    }
+  },
+  "expect": {
+    "state": "PASS",
+    "must_pass": ["GATE-01", "GATE-02", "GATE-11", "GATE-20", "GATE-50", "GATE-51", "GATE-52"],
+    "must_fail": []
+  }
+}

@@ -1,0 +1,25 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as below."
+title: "Zisu Investment Analysis"
+abstract: >-
+  An agentic equity-research framework that constrains LLM hallucination
+  through typed value contracts and fail-closed gates. Provides an 8-phase
+  analysis pipeline, 25 programmatic gates across 5 quality stages,
+  reverse-DCF guardrails, four public forensic accounting models,
+  and an evaluation harness with fault injection.
+type: software
+license: Apache-2.0
+version: 1.0.0
+date-released: 2026-09-21
+keywords:
+  - agent
+  - llm
+  - guardrails
+  - equity-research
+  - evaluation
+  - typed-contracts
+  - fail-closed
+repository-code: "https://github.com/sun111msc/zisu-investment-analysis"
+url: "https://github.com/sun111msc/zisu-investment-analysis"
+authors:
+  - name: "Zisu Investment Analysis Contributors"

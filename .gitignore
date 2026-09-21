@@ -1,0 +1,60 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# virtualenv
+.venv/
+venv/
+env/
+ENV/
+
+# test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# ruff / mypy
+.ruff_cache/
+.mypy_cache/
+.dmypy.json
+
+# editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 本地运行产物
+evals/reports/*.json
+!evals/reports/*.md
+*.audit.jsonl
+local/
+private/
+
+# 环境变量与凭证
+.env
+.env.local
+*.key
+credentials.json
+
+# 文档站构建产物
+site/
+
+# 打包产物
+*.zip
+*.tar.gz

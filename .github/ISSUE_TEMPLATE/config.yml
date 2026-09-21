@@ -1,0 +1,18 @@
+blank_issues_enabled: false
+
+contact_links:
+  - name: 先读文档
+    url: https://github.com/sun111msc/zisu-investment-analysis/tree/main/docs
+    about: 大部分「怎么用」「为什么这样设计」的问题，在 15 篇方法论文档里都有答案
+
+  - name: 快速上手
+    url: https://github.com/sun111msc/zisu-investment-analysis/blob/main/docs/engineering/quickstart.md
+    about: 安装、运行、写自己的场景、接入数据源、新增闸门
+
+  - name: 架构决策记录
+    url: https://github.com/sun111msc/zisu-investment-analysis/tree/main/docs/engineering/adr
+    about: 为什么这样设计、否决了什么方案 —— 共 6 篇 ADR
+
+  - name: 免责声明
+    url: https://github.com/sun111msc/zisu-investment-analysis/blob/main/DISCLAIMER.md
+    about: 本项目为研究与工程示范用途，不构成任何投资建议

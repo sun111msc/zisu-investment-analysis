@@ -1,0 +1,31 @@
+# 默认：自动检测文本文件，统一使用 LF
+* text=auto eol=lf
+
+# 脚本：保持各自平台的换行符
+*.sh    text eol=lf
+*.bat   text eol=crlf
+*.ps1   text eol=crlf
+
+# 明确指定文本类型
+*.md    text
+*.py    text
+*.toml  text
+*.yml   text
+*.yaml  text
+*.json  text
+
+# 二进制：不做转换
+*.png   binary
+*.jpg   binary
+*.jpeg  binary
+*.gif   binary
+*.ico   binary
+*.pdf   binary
+*.zip   binary
+
+# 生成物不参与语言统计
+evals/reports/* linguist-generated=true
+evals/baselines.json linguist-generated=true
+
+# 文档不作为主要语言
+docs/** linguist-documentation

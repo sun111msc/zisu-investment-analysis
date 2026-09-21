@@ -1,0 +1,9 @@
+{
+  "metrics": {
+    "state_accuracy": 1.0,
+    "gate_agreement": 1.0,
+    "hallucination_catch_rate": 1.0,
+    "mean_pass_rate": 0.908,
+    "baseline_integrity": 1.0
+  }
+}

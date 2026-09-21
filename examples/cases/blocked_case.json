@@ -1,0 +1,79 @@
+{
+  "symbol": "DEMO-BAD.SZ",
+  "title": "拦截样例：非结构化源越权 + 拆解不足 + 单点目标价",
+  "description": "演示三类真实事故：① 用通用检索源去提供估值语义；② 分业务拆解不足；③ 目标价给单一数字。全部为虚构数据。",
+  "sources": {
+    "news.events": ["pe_ttm", "market_cap"],
+    "market.quote.primary": ["price", "shares_outstanding"],
+    "financials.statements.primary": ["revenue", "net_income", "gross_margin"]
+  },
+  "records": {
+    "news.events": {},
+    "market.quote.primary": {
+      "price|DEMO-BAD.SZ": [15.6, "TODAY", "CNY"],
+      "shares_outstanding|DEMO-BAD.SZ": [3.0, "TODAY", null]
+    },
+    "financials.statements.primary": {
+      "revenue|DEMO-BAD.SZ": [50.0, "TODAY", "CNY"],
+      "net_income|DEMO-BAD.SZ": [3.0, "TODAY", "CNY"],
+      "gross_margin|DEMO-BAD.SZ": [31.0, "TODAY", null]
+    }
+  },
+  "meta": {
+    "profile": {
+      "one_liner": "一家提供一站式全链路赋能解决方案的科技型企业",
+      "business_lines": [
+        { "name": "主营业务", "revenue": 50.0, "revenue_share": 1.0, "gross_margin": 31.0 }
+      ],
+      "peers": [],
+      "exec_summary": {
+        "thesis": "行业景气度提升，公司有望受益",
+        "target_range": 19.5,
+        "reasons": ["行业需求增长"],
+        "risks": ["竞争加剧"]
+      }
+    },
+    "industry": { "tam": 600.0, "sam": 90.0, "som": 12.0, "cagr": 0.09, "penetration": 0.35 },
+    "chain": {
+      "layers": [
+        { "level": 1, "name": "上游材料行业", "process": "聚合", "unit_value": 2.0, "unit": "元/kg", "global_suppliers": 15 }
+      ],
+      "excluded_competitors": [],
+      "capacity_bridge": {}
+    },
+    "assumptions": { "revenue_growth": 0.08, "net_margin_target": 0.07 },
+    "market": {
+      "nonconsensus": ["行业需求可能超预期"],
+      "bear_arguments": [],
+      "bull_arguments": [
+        { "claim": "行业需求增长确定性高", "evidence_grade": "L1" },
+        { "claim": "公司份额有望提升", "evidence_grade": "L1" }
+      ],
+      "counterfactuals": [],
+      "cycles": { "stage": "growth" }
+    },
+    "valuation": { "wacc": 0.1, "terminal_g": 0.03, "net_debt": 0.0, "peers": [] },
+    "execution": { "governance": "C", "environment": "B", "stop_loss_pct": 0.12, "horizon": "medium" }
+  },
+  "expect": {
+    "state": "BLOCKED",
+    "must_pass": [],
+    "must_fail": [
+      "GATE-01",
+      "GATE-02",
+      "GATE-04",
+      "GATE-10",
+      "GATE-11",
+      "GATE-12",
+      "GATE-13",
+      "GATE-14",
+      "GATE-15",
+      "GATE-16",
+      "GATE-23",
+      "GATE-42",
+      "GATE-50",
+      "GATE-51",
+      "GATE-52"
+    ]
+  }
+}

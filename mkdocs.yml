@@ -1,0 +1,95 @@
+site_name: 紫苏投资分析
+site_description: 以产业链物理瓶颈为锚点的股票分析方法论 · 15 篇方法论文档 · 25 道纪律闸门
+site_url: https://sun111msc.github.io/zisu-investment-analysis/
+repo_url: https://github.com/sun111msc/zisu-investment-analysis
+repo_name: sun111msc/zisu-investment-analysis
+edit_uri: edit/main/docs/
+copyright: Apache-2.0 · 本项目为研究与工程示范用途，不构成任何投资建议
+
+theme:
+  name: material
+  language: zh
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换到深色模式
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: 切换到浅色模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.action.edit
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - 首页: index.md
+  - 快速上手: engineering/quickstart.md
+  - 方法论:
+      - 00 体系总纲: 00-体系总纲.md
+      - 01 分析哲学与第一性原理: 01-分析哲学与第一性原理.md
+      - 02 分析流程：八阶段正金字塔: 02-分析流程-八阶段正金字塔.md
+      - 03 深度穿透五铁律: 03-深度穿透五铁律.md
+      - 04 产业链瓶颈方法论: 04-产业链瓶颈方法论.md
+      - 05 周期与成长判定: 05-周期与成长判定.md
+      - 06 估值方法论: 06-估值方法论.md
+      - 07 财务真相与盈余质量: 07-财务真相与盈余质量.md
+      - 08 管理层与治理评估: 08-管理层与治理评估.md
+      - 09 行业结构与护城河: 09-行业结构与护城河.md
+      - 10 市场结构与定价机制: 10-市场结构与定价机制.md
+      - 11 A股市场生态洞察: 11-A股市场生态洞察.md
+      - 12 执行体系与风控纪律: 12-执行体系与风控纪律.md
+      - 13 研究报告标准与自检清单: 13-研究报告标准与自检清单.md
+      - 14 端到端决策流程: 14-端到端决策流程.md
+  - 工程实现:
+      - 架构: engineering/architecture.md
+      - 闸门目录: engineering/gate-catalog.md
+      - 数值契约: engineering/contract-spec.md
+      - 工程原则: engineering/principles.md
+      - 架构决策记录: engineering/adr/README.md
+  - 评测: https://github.com/sun111msc/zisu-investment-analysis/tree/main/evals
+  - 贡献指南: https://github.com/sun111msc/zisu-investment-analysis/blob/main/CONTRIBUTING.md
+  - 免责声明: https://github.com/sun111msc/zisu-investment-analysis/blob/main/DISCLAIMER.md
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.details
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search:
+      lang: zh
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/sun111msc
