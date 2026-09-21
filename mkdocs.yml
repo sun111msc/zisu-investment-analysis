@@ -90,6 +90,16 @@ nav:
   - 体系白皮书:
       - 说明与阅读入口: whitepaper/README.md
       - 白皮书 v8.2 · 完全体无遗漏版: whitepaper/浑天紫苏全体系方法论白皮书_v8.2.md
+  - Skill 方法论全文:
+      - 索引与对应关系: skills/README.md
+      - 紫苏叶瓶颈猎手: skills/serenity-紫苏叶瓶颈猎手.md
+      - 《投资最重要的事》思想体系: skills/马克斯-投资最重要的事.md
+      - 卖方研报解码框架: skills/卖方研报解码框架.md
+      - 受治理 DCF 估值规范: skills/受治理DCF估值规范.md
+      - 全市场估值异常扫描: skills/全市场估值异常扫描.md
+      - A股筹码峰分析系统: skills/A股筹码峰分析系统.md
+      - 风控仓位执行体系: skills/风控仓位执行体系.md
+      - 个人交易系统 · 双身份制: skills/个人交易系统-双身份制.md
   - 参考资料:
       - 索引: reference/README.md
       - 投行级14章报告模板: reference/投行级14章报告模板.md
