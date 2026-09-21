@@ -56,6 +56,50 @@ nav:
       - 12 执行体系与风控纪律: 12-执行体系与风控纪律.md
       - 13 研究报告标准与自检清单: 13-研究报告标准与自检清单.md
       - 14 端到端决策流程: 14-端到端决策流程.md
+  - 功能模块:
+      - 模块索引: modules/README.md
+      - 01 天象 · 宏观情绪门禁: modules/01-天象-宏观情绪门禁.md
+      - 02 经纬 · 多维数据采集: modules/02-经纬-多维数据采集.md
+      - 02b 新闻雷达 · 实时信息流: modules/02b-新闻雷达-实时信息流与行业风险.md
+      - 03 司书 · 研报解码: modules/03-司书-研报解码与机构行为.md
+      - 04 紫苏 · 产业链瓶颈深挖: modules/04-紫苏-产业链瓶颈深挖.md
+      - 05 朝议 · 多派系对抗评审: modules/05-朝议-多派系对抗评审.md
+      - 06 测影 · 价格行为分析: modules/06-测影-价格行为分析.md
+      - 07 观流 · 机构资金行为: modules/07-观流-机构资金行为透视.md
+      - 08 潜渊 · A股制度排雷: modules/08-潜渊-A股制度与隐藏规则.md
+      - 09 推演 · 量化策略验证: modules/09-推演-量化策略验证.md
+      - 09b 望远镜 · 题材与阶段判定: modules/09b-望远镜-题材级别与产业阶段判定.md
+      - 09c 溯源 · 周期与困境反转: modules/09c-溯源-困境反转与周期波动.md
+      - 10 司南 · 冲突仲裁矩阵: modules/10-司南-冲突仲裁矩阵.md
+      - 11 弓矢 · 风控仓位执行: modules/11-弓矢-风控仓位执行.md
+  - 速查手册:
+      - 索引与核心数字: quickref/README.md
+      - 七条铁律: quickref/七条铁律.md
+      - 每日开盘检查清单: quickref/每日开盘检查清单.md
+      - 风控评分矩阵: quickref/风控评分矩阵.md
+      - 紫苏叶等级仓位上限: quickref/紫苏叶等级仓位上限.md
+      - 八种退出场景: quickref/八种退出场景.md
+      - 行业BOM拆解模板: quickref/行业BOM拆解模板.md
+      - 晨间策略简报模板: quickref/晨间策略简报模板.md
+      - 进阶速查卡合集: quickref/进阶速查卡合集.md
+  - 系统架构:
+      - 索引与说明: architecture/README.md
+      - 11大模块关系图: architecture/11大模块关系图.md
+      - 6层漏斗架构: architecture/6层漏斗架构.md
+      - 信号流转与决策手册: architecture/信号流转与决策手册.md
+  - 体系白皮书:
+      - 说明与阅读入口: whitepaper/README.md
+      - 白皮书 v8.2 · 完全体无遗漏版: whitepaper/浑天紫苏全体系方法论白皮书_v8.2.md
+  - 参考资料:
+      - 索引: reference/README.md
+      - 投行级14章报告模板: reference/投行级14章报告模板.md
+      - 行为金融决策日志模板: reference/行为金融决策日志模板.md
+      - 法务会计详细规范: reference/法务会计详细规范.md
+      - 宏观行业个股传导: reference/宏观行业个股传导.md
+      - 板块分析框架: reference/板块分析框架.md
+      - 投行对标基准: reference/投行对标基准.md
+      - 工具附录: reference/工具附录.md
+      - 版本映射: reference/版本映射.md
   - 工程实现:
       - 架构: engineering/architecture.md
       - 闸门目录: engineering/gate-catalog.md

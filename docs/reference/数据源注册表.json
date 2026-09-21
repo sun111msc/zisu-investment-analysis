@@ -1,0 +1,244 @@
+{
+  "version": "1.0.0",
+  "updated": "2026-07-22",
+  "description": "浑天紫苏全体系数据源统一注册表。管理所有skill/MCP/Python脚本的可用状态、备选链和已知问题。每次发现数据源不可用/发现新可靠源时，必须立即更新此注册表。",
+  "data_sources": {
+    "financial_data": {
+      "PE_PB_ROE_EPS_marketcap": {
+        "primary": "ftshare stock-security-info",
+        "secondary": ["mx-data", "tdx-connector tdx_quotes"],
+        "fallback": "neodata-financial-search / westock-data",
+        "prohibition": "ABSOLUTELY_NO_WEBSearch",
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "income_statement": {
+        "primary": "mx-data",
+        "secondary": ["ftshare stock-income-single-stock-all-periods"],
+        "fallback": "WebFetch 年报 (标注L2降级)",
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "balance_sheet": {
+        "primary": "ftshare stock-balance-single-stock-all-periods",
+        "secondary": ["mx-data"],
+        "fallback": "WebFetch 年报 (标注L2降级)",
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "cashflow": {
+        "primary": "ftshare stock-cashflow-single-stock-all-periods",
+        "secondary": ["mx-data"],
+        "fallback": "WebFetch 年报 (标注L2降级)",
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "pledge": {
+        "primary": "ftshare pledge-detail",
+        "secondary": ["mx-data 股权质押", "tdx-connector"],
+        "fallback": "WebFetch https://data.eastmoney.com/gpzy/stock/{CODE}.html",
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "top_holders": {
+        "primary": "ftshare stock-holder-ten",
+        "secondary": ["mx-data 十大股东"],
+        "fallback": "年报/季报 WebFetch",
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "northbound_flow": {
+        "primary": "tdx-connector",
+        "secondary": ["eastmoney_financial_data", "westock-data"],
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "margin_data": {
+        "primary": "tdx-connector tdx_api_data fixedTag=rzrq",
+        "secondary": ["eastmoney_financial_data"],
+        "last_verified": "2026-07-22",
+        "status": "active"
+      }
+    },
+    "market_data": {
+      "kline_daily": {
+        "primary": "tdx-connector tdx_kline(period=day, count=250)",
+        "secondary": ["westock-data"],
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "kline_weekly": {
+        "primary": "tdx-connector tdx_kline(period=week, count=52)",
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "realtime_quotes": {
+        "primary": "tdx-connector tdx_quotes",
+        "secondary": ["ftshare stock-security-info"],
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "sector_ranking": {
+        "primary": "新浪财经 sector script (python call_api.py --index_type hy --sort rp_net --num 20)",
+        "secondary": ["mx-data 行业板块"],
+        "fallback": "tdx-connector tdx_api_data 板块基础 entry",
+        "last_verified": "2026-07-21",
+        "status": "active",
+        "notes": "2026-07-21新增。用于Layer 3.5板块联动PA"
+      }
+    },
+    "liquidity_data": {
+      "market_volume": {
+        "primary": "tdx-connector tdx_quotes (全市场行情快照·需遍历所有个股计算总成交额)",
+        "secondary": ["WebSearch 全市场成交额"],
+        "fallback": "上一层交易日数据 + 标注[估算]",
+        "last_verified": "2026-07-22",
+        "status": "active",
+        "notes": "v7.0 Liquidity补完新增·用于§L-1.1全市场成交量分析"
+      },
+      "volume_structure": {
+        "primary": "tdx-connector tdx_quotes (按成交额排序个���·计算Top5%/10%/20%占比)",
+        "fallback": "WebSearch 市场结构分析 + 标注[定性·非精确]",
+        "last_verified": "2026-07-22",
+        "status": "active",
+        "notes": "v7.0 Liquidity补完新增·用于§L-1.2成交量结构性分化"
+      },
+      "turnover_rate": {
+        "primary": "tdx-connector tdx_quotes (全市场个股换手率汇总)",
+        "secondary": ["ftshare stock-security-info (个股换手率)"],
+        "last_verified": "2026-07-22",
+        "status": "active",
+        "notes": "v7.0 Liquidity补完新增·用于§L-1.3换手率趋势"
+      },
+      "zero_trade_days": {
+        "primary": "tdx-connector tdx_kline (全市场个股K线·成交量为0的天数统计)",
+        "fallback": "WebSearch 僵尸股报道 + 标注[定性]",
+        "last_verified": "2026-07-22",
+        "status": "active",
+        "notes": "v7.0 Liquidity补完新增·用于§L-1.4零交易天数"
+      },
+      "global_linkage": {
+        "primary": "WebSearch (美股/韩股/日股指数+关键个股涨跌)",
+        "secondary": ["tdx-connector 全球指数"],
+        "last_verified": "2026-07-22",
+        "status": "active",
+        "notes": "v7.0 Liquidity补完新增·用���§L-1.7全球宏观联动"
+      }
+    },
+    "alternative_data": {
+      "patents": {
+        "primary": "patsnap-search MCP",
+        "secondary": ["WebSearch 专利检索"],
+        "last_verified": "2026-07-22",
+        "status": "available",
+        "notes": "v7.0新增·用于§8.6.1专利信号和§3产业链技术路线图"
+      },
+      "company_registry": {
+        "primary": "qcc-company MCP",
+        "secondary": ["tyc-mcp"],
+        "fallback": "WebSearch 工商信息",
+        "last_verified": "2026-07-22",
+        "status": "available",
+        "notes": "v7.0新增·用于§3供应链分析和§3.15产业链交叉验证"
+      },
+      "global_comps": {
+        "primary": "westock-data (海外可比公司财务)",
+        "secondary": ["WebSearch 海外公司年报"],
+        "last_verified": "2026-07-22",
+        "status": "available",
+        "notes": "v7.0新增·用于§9.8全球对标"
+      },
+      "options_data": {
+        "primary": "tdx-connector tdx_option_t_quote",
+        "last_verified": "2026-07-22",
+        "status": "available",
+        "notes": "v7.0新增·用于§8.9期权GEX分析·仅适用50ETF/300ETF/500ETF期权"
+      },
+      "limit_up_analysis": {
+        "primary": "tdx-connector tdx_api_data fixedTag=ztfx (涨停分析)",
+        "secondary": ["tdx-connector tdxsj_lhbd_lhbzl branch=1 (龙虎榜)"],
+        "last_verified": "2026-07-22",
+        "status": "active",
+        "notes": "v7.0升级·用于Layer -1情绪温度计和Layer 2.5资金行为层"
+      }
+    },
+    "news_events": {
+      "company_news": {
+        "primary": "tdx-connector wenda_news_query",
+        "secondary": ["WebSearch 媒体报道"],
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "company_notices": {
+        "primary": "tdx-connector wenda_notice_query",
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "research_reports": {
+        "primary": "tdx-connector wenda_report_query",
+        "secondary": ["eastmoney_financial_search 研报"],
+        "fallback": "WebSearch 研报标题",
+        "last_verified": "2026-07-22",
+        "status": "active"
+      }
+    },
+    "search_tools": {
+      "web_search": {
+        "primary": "WebSearch",
+        "secondary": ["social-search (社交媒体/雪球/股吧)"],
+        "prohibition": "禁止用于获取估值/财务/结构化数据",
+        "last_verified": "2026-07-22",
+        "status": "active"
+      },
+      "wechat_articles": {
+        "primary": "wechat-article-search skill",
+        "last_verified": "2026-07-22",
+        "status": "available"
+      }
+    }
+  },
+  "known_issues": {
+    "ftshare_macro_api": {
+      "issue": "仅返回2000-2005历史数据",
+      "impact": "§2宏观分析需要替代源",
+      "workaround": "国家统计局/央行官网/东方财富宏观",
+      "status": "known_bug"
+    },
+    "cninfo_industry": {
+      "issue": "返回错误行业分类",
+      "impact": "行业分类不可靠",
+      "workaround": "新浪财经概念板块+东方财富行业分类",
+      "status": "abandoned"
+    },
+    "duckduckgo_chinese": {
+      "issue": "中文搜索返回无关内容",
+      "impact": "中文数据获取受限",
+      "workaround": "WebSearch(使用Google索引)·微信公众号搜索·social-search",
+      "status": "unsuitable"
+    },
+    "xueqiu_cubes": {
+      "issue": "2026起需登录",
+      "impact": "雪球组合数据不可用",
+      "workaround": "social-search(雪球帖子内容搜索)",
+      "status": "degraded"
+    },
+    "post_market_data_gap": {
+      "issue": "盘后部分API返回空(如融资融券)",
+      "impact": "盘后分析可能缺失当日最新数据",
+      "workaround": "自动切换备源→备源也空→标注[数据暂缺]→连续3天空→标注[数据源异常]",
+      "status": "intermittent"
+    }
+  },
+  "data_freshness_rules": {
+    "financial_report": {"max_age_days": 180, "downgrade": ">180天→🔴过期·禁止作为核心论点唯一依据"},
+    "research_report": {"max_age_days": 90, "downgrade": ">90天→[降权·报告日期标注]"},
+    "production_cert_data": {"max_age_days": 365, "downgrade": ">12月→标注[时效性风险]"},
+    "patent_data": {"max_stale_years": 3, "warning": ">3年未新增→标注[技术可能停滞]"},
+    "market_price": {"rule": "必须使用本交易日收盘价", "source": "tdx-connector/neodata/westock"}
+  },
+  "dual_source_verification": {
+    "mandatory_items": ["PE(TTM)", "总市值", "ROE", "EPS", "质押率", "十大股东", "北向持仓", "融资余额"],
+    "conflict_resolution": "以L1来源为准·标注冲突·降置信度",
+    "single_source_penalty": "仅一源→证据等级自动降一级·标注[单源]"
+  }
+}

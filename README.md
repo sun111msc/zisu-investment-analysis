@@ -9,7 +9,7 @@
 *产业链穿透 · 反向估值 · 市场结构 · 纪律化执行*
 
 [![License](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
-[![Docs](https://img.shields.io/badge/方法论文档-15篇-informational.svg)](docs/00-体系总纲.md)
+[![Docs](https://img.shields.io/badge/方法论文档-62%20篇%20%2F%2017k%20行-informational.svg)](docs/index.md)
 [![Gates](https://img.shields.io/badge/纪律闸门-25道-important.svg)](docs/engineering/gate-catalog.md)
 [![Tests](https://img.shields.io/badge/tests-140%20passed-brightgreen.svg)](tests)
 [![CI](https://github.com/sun111msc/zisu-investment-analysis/actions/workflows/ci.yml/badge.svg)](https://github.com/sun111msc/zisu-investment-analysis/actions/workflows/ci.yml)
@@ -378,6 +378,40 @@ zisu analyze case.json --json --fail-on-block    # 供 CI 使用
 **为什么不用全凯利**：胜率 60%、盈亏比 2:1 时 Kelly = 40%，但连亏 5 次本金会损失 92%。四分之一凯利是默认值。
 
 → 完整方法见 [12-执行体系与风控纪律](docs/12-执行体系与风控纪律.md)
+
+---
+
+## 完整文档体系
+
+**62 个文档 / 17,000+ 行。** 按用途分为六个层次：
+
+| 层 | 目录 | 篇数 | 用途 |
+|---|---|---|---|
+| **体系白皮书** | [`docs/whitepaper/`](docs/whitepaper/README.md) | 1 篇 / 1,725 行 | 完整档案：14 部分、114 章节，从理论地基到附录模板一次读全 |
+| **方法论** | [`docs/00-14`](docs/00-体系总纲.md) | 15 篇 / 5,977 行 | 分层导读，按主题拆分，便于单点查阅 |
+| **功能模块** | [`docs/modules/`](docs/modules/README.md) | 14 篇 / 6,281 行 | 十一个模块的执行细节（含价格行为十一层、A股制度十层透视等） |
+| **速查手册** | [`docs/quickref/`](docs/quickref/README.md) | 9 篇 | 可执行清单，交易时随开随用 |
+| **系统架构** | [`docs/architecture/`](docs/architecture/README.md) | 4 篇 | 模块关系图、六层漏斗、信号流转 |
+| **参考资料** | [`docs/reference/`](docs/reference/README.md) | 9 篇 | 报告模板、法务会计规范、数据源注册表 |
+
+### 十一个功能模块
+
+| # | 模块 | 职责 |
+|---|---|---|
+| 1 | [天象](docs/modules/01-天象-宏观情绪门禁.md) | 宏观情绪门禁，环境评级 A/B/C/D |
+| 2 | [经纬](docs/modules/02-经纬-多维数据采集.md) | 多维数据采集与证据分级 |
+| 2b | [新闻雷达](docs/modules/02b-新闻雷达-实时信息流与行业风险.md) | 实时信息流与跨行业联动 |
+| 3 | [司书](docs/modules/03-司书-研报解码与机构行为.md) | 研报解码，提取被忽略的信号 |
+| 4 | [紫苏](docs/modules/04-紫苏-产业链瓶颈深挖.md) | 产业链瓶颈深挖（**体系核心锚点**） |
+| 5 | [朝议](docs/modules/05-朝议-多派系对抗评审.md) | 多派系对抗评审 |
+| 6 | [测影](docs/modules/06-测影-价格行为分析.md) | 价格行为分析（十一层架构） |
+| 7 | [观流](docs/modules/07-观流-机构资金行为透视.md) | 机构资金行为透视 |
+| 8 | [潜渊](docs/modules/08-潜渊-A股制度与隐藏规则.md) | A 股制度与隐藏规则（十层透视） |
+| 9 | [推演](docs/modules/09-推演-量化策略验证.md) | 量化策略验证与筹码结构 |
+| 9b | [望远镜](docs/modules/09b-望远镜-题材级别与产业阶段判定.md) | 题材级别与产业阶段判定 |
+| 9c | [溯源](docs/modules/09c-溯源-困境反转与周期波动.md) | 困境反转与周期波动 |
+| 10 | [司南](docs/modules/10-司南-冲突仲裁矩阵.md) | 冲突仲裁矩阵（唯一汇聚点） |
+| 11 | [弓矢](docs/modules/11-弓矢-风控仓位执行.md) | 风控、仓位与执行 |
 
 ---
 
